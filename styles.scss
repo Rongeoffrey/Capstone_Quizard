@@ -1,0 +1,222 @@
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;  
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+* {
+text-decoration: none;
+}
+
+$primaryButton : white;
+$primaryFont : 'Bungee';
+
+body{
+    background-image: url(./images/try.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header{
+    height: 65px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: space-between;
+    
+    .header_brand{
+        font-family: $primaryFont;
+        font-size: 24px;
+        padding: 20px 0px 0px 70px;
+
+        a{
+            animation-name: brandColor;
+            animation-duration: 9s;
+            animation-iteration-count: infinite;
+
+            @keyframes brandColor {
+                0%   {color:#731753;}
+                25%  {color:#F25CBE}
+                50%  {color:#EF4BF2}
+                75%  {color:#441673}
+                100% {color:#F25252}
+            }
+        }
+    }
+
+    .header_buttons{
+        font-family: $primaryFont;
+        font-size: 13px;
+        padding: 32px 100px 0px 0px;
+        }
+
+        ul{
+            display: flex;
+        }
+
+        li{
+            list-style: none;
+            padding-right: 15px;
+        }
+
+        a{
+            color: $primaryButton;
+            &:hover{
+                animation-name: brandColor;
+                animation-duration: 9s;
+                animation-iteration-count: infinite;
+    
+                @keyframes brandColor {
+                    0%   {color:#731753}
+                    25%  {color:#F25CBE}
+                    50%  {color:#EF4BF2}
+                    75%  {color:#441673}
+                    100% {color:#F25252}
+                }
+        }
+    }
+}
+
+/* ABOUT PAGE */
+/* GAMES PAGE */
+.gamesContainer{
+    justify-content: center;
+    overflow: hidden;
+    align-items: center;
+    display: flex;
+    height: 100vh;
+
+    .slider{
+        position: relative;
+        width: 200px;
+        height: 200px;
+        transform-style: preserve-3d;
+        animation: rotate 30s linear infinite;
+
+        @keyframes rotate{
+            0% {
+                transform: perspective(1000px) rotateY(0deg);
+            }
+    
+            100% {
+                transform: perspective(1000px) rotateY(360deg);
+            }
+        }
+
+        span{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transform-origin: center;
+            transform-style: preserve-3d;
+            transform: rotateY(Calc(var(--i)*45deg)) translate(350px);
+
+            img{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 80%;
+                height: 80%;
+                border-radius: 30px;
+                object-fit: cover;
+                transition: 2s;
+                border: 5px solid #EF4BF2;
+
+                &:hover{
+                    transform: translate(-50px) scale(1.4);
+                }
+            }
+        }
+    }
+}
