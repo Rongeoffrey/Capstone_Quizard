@@ -5,22 +5,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./styles.css">
+    <link href="http://fonts.cdnfonts.com/css/itc-avant-garde-gothic-std-book" rel="stylesheet">
+    <link href="http://fonts.cdnfonts.com/css/circular-std" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/styles.css">
     <title>Quizard</title>
 </head>
 <body>
-    <header>
-            <div class="header_brand">
-                <a href="#"><h1> Quizard </h1></a>
-            </div>
-
-            <div class="header_buttons">
-                <ul>
-                    <li><a href="#"> Home </a></li>
-                    <li><a href="#"> Contact </a></li>
-                    <li><a href="games.html"> Games </a></li>
-            </div>
-    </header>
     
+    <header>
+        <div class="header_brand"></div>
+
+        <div class="header_buttons">
+            <ul>
+                <li><a href="#"> Home </a></li>
+                <li><a href="#"> Contact </a></li>
+                <li><a href="games.html"> Games </a>
+                    <ul>
+                        <li><a href="#"> Word Search </a></li>
+                        <li><a href="#"> Crossword </a></li>
+                        <li><a href="#"> HWTBA Millionaire </a></li>
+                    </ul>
+                </li>
+
+                    <a href="login.html" id="logout"> logout</a>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <div class="left_main">
+            <h1> Quizard </h1>
+            <h2> A Game Based Web Application </h2>
+        </div>
+        <div class="right_main">
+            <div class="model_icon"></div>
+        </div>
+    </main>
+
+    <script src="./index.js" type="module"></script>
 </body>
 </html>

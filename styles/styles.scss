@@ -1,0 +1,187 @@
+@import "./resetsheet";
+
+$primaryColor : white;
+$primaryFont : 'Bungee';
+$landPagefont : 'ITC Avant Garde Gothic Std Bold', sans-serif;
+$landPagesubfont : 'Circular Std', sans-serif;
+$clipPath : polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+
+body{
+    background: rgb(89,6,194);
+    background: linear-gradient(180deg, rgba(89,6,194,1) 14%, rgba(43,19,138,1) 50%, rgba(25,7,47,1) 91%);
+    background-size: cover;
+    height: 100vh;
+}
+
+/* ----------------------------------------*/
+
+header{
+    height: 65px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    
+    
+    .header_brand{
+    }
+
+    .header_buttons{
+        font-family: $primaryFont;
+        font-size: 14px;
+        padding: 35px 100px 0px 0px;
+        }
+
+        ul{
+            display: flex;
+        }
+
+        li{
+            list-style: none;
+            padding-right: 25px;
+            ul{
+                display: none;
+                position: absolute; 
+                li{
+                    padding-top: 15px;                
+                }
+            }
+            &:hover ul{
+                display: block;
+            }
+        }
+
+        a{
+            color: $primaryColor;
+            &:hover{
+                animation-name: brandColor;
+                animation-duration: 9s;
+                animation-iteration-count: infinite;
+    
+                @keyframes brandColor {
+                    0%   {color:#731753}
+                    25%  {color:#F25CBE}
+                    50%  {color:#EF4BF2}
+                    75%  {color:#441673}
+                    100% {color:#F25252}
+                }
+        }
+    }
+}
+
+main{
+    min-height: 600px;
+    width: 100%;
+    display: flex;
+
+    .left_main{
+        color: $primaryColor;
+        
+        h1{
+            font-family: $landPagefont;
+            font-size: 75px;
+            padding: 187px 0px 0px 100px;
+            animation-name: brandColor;
+            animation-duration: 8s;
+            animation-iteration-count: infinite;
+
+            @keyframes brandColor {
+                0%   {color:#ffffff}
+                25%  {color:#F25CBE}
+                50%  {color:#EF4BF2}
+                75%  {color:#F25252}
+                100% {color:#EF4BF2}
+            }
+        }
+
+        h2{
+            font-family: $landPagesubfont;
+            font-size: 30px;
+            padding: 0px 10px 0px 100px;
+        }
+    }
+
+    .right_main{
+        display: flex;
+        align-items: center;
+        margin: auto;
+        padding: 0px 0px 0px 110px;
+
+        /*
+        .model_icon{
+            height: 500px;
+            width: 620px;
+            background-image: url(./images/landingPage/Console.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin-bottom: -10px;
+        }*/
+        .model_icon{
+            height: 480px;
+            width: 400px;
+            background-image: url(./images/landingPage/2.png);
+            border-radius: 50%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin-top: -170px;
+        }
+    }
+}
+
+/* ABOUT PAGE */
+/* GAMES PAGE */
+.games_main{
+
+}
+
+.gamesContainer{
+    justify-content: center;
+    overflow: hidden;
+    align-items: center;
+    display: flex;
+    height: 100vh;
+
+    .slider{
+        position: relative;
+        width: 200px;
+        height: 200px;
+        transform-style: preserve-3d;
+        animation: rotate 30s linear infinite;
+
+        @keyframes rotate{
+            0% {
+                transform: perspective(1000px) rotateY(0deg);
+            }
+    
+            100% {
+                transform: perspective(1000px) rotateY(360deg);
+            }
+        }
+
+        span{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transform-origin: center;
+            transform-style: preserve-3d;
+            transform: rotateY(Calc(var(--i)*45deg)) translate(350px);
+
+            img{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 80%;
+                height: 80%;
+                border-radius: 30px;
+                object-fit: cover;
+                transition: 2s;
+                border: 3px solid #a865ec;
+
+                &:hover{
+                    transform: translate(-50px) scale(1.4);
+                }
+            }
+        }
+    }
+}
