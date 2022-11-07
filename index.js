@@ -69,7 +69,7 @@ const dt = new Date();
 update(ref(database, 'users/' + user.uid),{
     last_login: username,
 })
-window.location = "index.html";
+window.location = "#";
 alert('User Logged in!');
 // ...
 })

@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee&display=swap");
+@import url("http://fonts.cdnfonts.com/css/circular-std");
+@import url("http://fonts.cdnfonts.com/css/itc-avant-garde-gothic-std-book");
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 abbr, address, cite, code,
@@ -97,6 +100,8 @@ input, select {
   text-decoration: none;
 }
 
+/*$landPagefont : 'ITC Avant Garde Gothic Std Bold', sans-serif;
+$landPagesubfont : 'Circular Std', sans-serif;*/
 body {
   background: rgb(89, 6, 194);
   background: linear-gradient(180deg, rgb(89, 6, 194) 14%, rgb(43, 19, 138) 50%, rgb(25, 7, 47) 91%);
@@ -188,7 +193,7 @@ main .left_main {
   color: white;
 }
 main .left_main h1 {
-  font-family: "ITC Avant Garde Gothic Std Bold", sans-serif;
+  font-family: "Bungee";
   font-size: 75px;
   padding: 187px 0px 0px 100px;
   -webkit-animation-name: brandColor;
@@ -216,8 +221,8 @@ main .left_main h1 {
   }
 }
 main .left_main h2 {
-  font-family: "Circular Std", sans-serif;
-  font-size: 30px;
+  font-family: "Bungee";
+  font-size: 28px;
   padding: 0px 10px 0px 100px;
 }
 main .right_main {
@@ -225,15 +230,6 @@ main .right_main {
   align-items: center;
   margin: auto;
   padding: 0px 0px 0px 110px;
-  /*
-  .model_icon{
-      height: 500px;
-      width: 620px;
-      background-image: url(./images/landingPage/Console.png);
-      background-size: cover;
-      background-repeat: no-repeat;
-      margin-bottom: -10px;
-  }*/
 }
 main .right_main .model_icon {
   height: 480px;
@@ -242,7 +238,7 @@ main .right_main .model_icon {
   border-radius: 50%;
   background-size: cover;
   background-repeat: no-repeat;
-  margin-top: -170px;
+  margin-top: -160px;
 }
 
 /* ABOUT PAGE */
@@ -302,4 +298,80 @@ main .right_main .model_icon {
 }
 .gamesContainer .slider span img:hover {
   transform: translate(-50px) scale(1.4);
+}
+
+/* REGISTER PAGE*/
+.login_form {
+  height: 500px;
+  width: 300px;
+  background-color: white;
+  margin: auto;
+  margin-top: 45px;
+  border-radius: 10px;
+  padding: 20px;
+}
+.login_form .login_container {
+  height: 250px;
+  width: 250px;
+  margin: auto;
+  text-align: center;
+  padding: 40px 0px 0px 0px;
+}
+.login_form .login_container h1 {
+  font-family: "Bungee";
+  font-size: 35px;
+  letter-spacing: 1px;
+  font-weight: 400;
+  padding-bottom: 40px;
+  text-transform: uppercase;
+}
+.login_form .login_container input {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  outline: none;
+  resize: none;
+  border: none;
+  border-bottom: 1px solid #F5E8E4;
+  margin-bottom: 10px;
+  font-family: "Bungee";
+}
+.login_form .login_container input[type=text]:focus, .login_form .login_container textarea:focus {
+  border-bottom: 1px solid linear-gradient(180deg, rgb(89, 6, 194) 14%, rgb(43, 19, 138) 50%, rgb(25, 7, 47) 91%);
+}
+.login_form .login_container input[type=submit] {
+  margin-top: 10px;
+  width: 90%;
+  max-width: 200px;
+  background: linear-gradient(180deg, rgb(89, 6, 194) 14%, rgb(43, 19, 138) 50%, rgb(25, 7, 47) 91%);
+  color: white;
+  font-size: 12px;
+  cursor: pointer;
+  border-radius: 30px;
+}
+.login_form .login_container input[type=submit]:hover {
+  cursor: pointer;
+  -webkit-animation-name: brandColor;
+          animation-name: brandColor;
+  -webkit-animation-duration: 8s;
+          animation-duration: 8s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+@keyframes brandColor {
+  0% {
+    color: #ffffff;
+  }
+  25% {
+    color: #F25CBE;
+  }
+  50% {
+    color: #EF4BF2;
+  }
+  75% {
+    color: #F25252;
+  }
+  100% {
+    color: #EF4BF2;
+  }
 }/*# sourceMappingURL=styles.css.map */

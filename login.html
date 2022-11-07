@@ -4,12 +4,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/styles.css">
     <title>Sign in to Quizard</title>
 </head>
+
 <body>
-    <div class="login-box">
-        <div class="left">
-            <h1>Sign Up</h1>
+    <header>
+        <div class="header_brand"></div>
+
+        <div class="header_buttons">
+            <ul>
+                <li><a href="index.html"> Home </a></li>
+                <li><a href="games.html"> Games </a>
+                    <ul>
+                        <li><a href="#"> Word Search </a></li>
+                        <li><a href="#"> Crossword </a></li>
+                        <li><a href="#"> HWTBA Millionaire </a></li>
+                    </ul>
+                </li>
+                <li><a href="#"> Join </a></li>
+                <li><a href="login.html"> register </a></li>
+
+                    <!--<a href="login.html" id="logout"> logout</a>-->
+            </ul>
+        </div>
+    </header>
+
+    <div class="login_form">
+        <div class="login_container">
+            <h1>Login Form</h1>
 
             <input type="text" id="username" name="username" placeholder="Username"/>
             <input type="text" id="email" name="email" placeholder="E-mail"/>
@@ -20,15 +43,6 @@
         </div>
     </div>
 </body>
-
-        <!--
-        <div class="or">OR</div>
-        <div class="right">
-            <span class="loginwith"> Sign in with<br /> Social network</span>
-            <button class="Social-signin facebook">Login with facebook</button>
-            <button class="Social-signin twitter">Login with twitter</button>
-            <button class="Social-signin google">Login with Google</button>
-        </div>-->
 
 <script src="./index.js" type="module"></script>
 </html>
