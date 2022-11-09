@@ -1,6 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Bungee&display=swap");
-@import url("http://fonts.cdnfonts.com/css/circular-std");
-@import url("http://fonts.cdnfonts.com/css/itc-avant-garde-gothic-std-book");
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 abbr, address, cite, code,
@@ -100,11 +98,10 @@ input, select {
   text-decoration: none;
 }
 
-/*$landPagefont : 'ITC Avant Garde Gothic Std Bold', sans-serif;
-$landPagesubfont : 'Circular Std', sans-serif;*/
 body {
   background: rgb(89, 6, 194);
   background: linear-gradient(180deg, rgb(89, 6, 194) 14%, rgb(43, 19, 138) 50%, rgb(25, 7, 47) 91%);
+  background-attachment: fixed;
   background-size: cover;
   height: 100vh;
 }
@@ -374,4 +371,55 @@ main .right_main .model_icon {
   100% {
     color: #EF4BF2;
   }
+}
+
+/* DASHBOARD */
+.dashboard_main {
+  width: 80%;
+  margin: auto;
+  margin-top: 85px;
+  height: 500px;
+  border-radius: 10px;
+  background-color: white;
+}
+.dashboard_main .dashboard_content {
+  padding: 40px 35px 20px;
+}
+.dashboard_main .dashboard_content h1 {
+  font-family: "Bungee";
+  font-size: 25px;
+  color: #808080;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+.dashboard_main .dashboard_content h2 {
+  font-family: "Bungee";
+  font-size: 18px;
+  color: #808080;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+}
+.dashboard_main .dashboard_content .dashboard_games {
+  width: 90%;
+  height: 320px;
+  border: 2px solid #111;
+  border-radius: 10px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+.dashboard_main .dashboard_content .dashboard_games .game1, .dashboard_main .dashboard_content .dashboard_games .game2, .dashboard_main .dashboard_content .dashboard_games .game3 {
+  width: 280px;
+  height: 300px;
+  background: linear-gradient(180deg, rgb(89, 6, 194) 14%, rgb(43, 19, 138) 50%, rgb(25, 7, 47) 91%);
+  margin: 10px;
+  border-radius: 10px;
+  text-align: center;
+}
+.dashboard_main .dashboard_content .dashboard_games .game1 h3, .dashboard_main .dashboard_content .dashboard_games .game2 h3, .dashboard_main .dashboard_content .dashboard_games .game3 h3 {
+  color: white;
+  font-family: "Bungee";
+  font-size: 15px;
+  padding-top: 130px;
+  letter-spacing: 2px;
 }/*# sourceMappingURL=styles.css.map */

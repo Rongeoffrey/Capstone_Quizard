@@ -69,7 +69,7 @@ const dt = new Date();
 update(ref(database, 'users/' + user.uid),{
     last_login: username,
 })
-window.location = "#";
+window.location = "dashborad.html";
 alert('User Logged in!');
 // ...
 })

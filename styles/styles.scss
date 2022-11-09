@@ -2,18 +2,16 @@
 @import "./webfont";
 
 $primaryColor : white;
+$secondaryColor : #808080;
+$tertiaryColor : #111;
 $clipPath : polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
 $mainBackground : linear-gradient(180deg, rgba(89,6,194,1) 14%, rgba(43,19,138,1) 50%, rgba(25,7,47,1) 91%);
 $primaryFont : 'Bungee';
-$landPagefont : 'Bungee';
-$landPagesubfont : 'Bungee';
-
-/*$landPagefont : 'ITC Avant Garde Gothic Std Bold', sans-serif;
-$landPagesubfont : 'Circular Std', sans-serif;*/
 
 body{
     background: rgb(89,6,194);
     background: $mainBackground;
+    background-attachment: fixed;
     background-size: cover;
     height: 100vh;
 }
@@ -73,7 +71,7 @@ main{
     .left_main{
         color: $primaryColor;
         h1{
-            font-family: $landPagefont;
+            font-family: $primaryFont;
             font-size: 75px;
             padding: 187px 0px 0px 100px;
             animation-name: brandColor;
@@ -88,7 +86,7 @@ main{
             }
         }
         h2{
-            font-family: $landPagesubfont;
+            font-family: $primaryFont;
             font-size: 28px;
             padding: 0px 10px 0px 100px;
         }
@@ -227,3 +225,53 @@ main{
     }
 }
 
+/* DASHBOARD */
+.dashboard_main{
+    width: 80%;
+    margin: auto;
+    margin-top: 85px;
+    height: 500px;
+    border-radius: 10px;
+    background-color: $primaryColor;
+    .dashboard_content{
+        padding: 40px 35px 20px;
+        h1{
+            font-family: $primaryFont;
+            font-size: 25px;
+            color: $secondaryColor;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+        h2{
+            font-family: $primaryFont;
+            font-size: 18px;
+            color: $secondaryColor;
+            letter-spacing: 1px;
+            margin-bottom: 30px;
+        }
+        .dashboard_games{
+            width: 90%;
+            height: 320px;
+            border: 2px solid $tertiaryColor;
+            border-radius: 10px;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            .game1, .game2, .game3{
+                width: 280px;
+                height: 300px;
+                background: $mainBackground;
+                margin: 10px;
+                border-radius: 10px;
+                text-align: center;
+                h3{
+                    color: $primaryColor;
+                    font-family: $primaryFont;
+                    font-size: 15px;
+                    padding-top: 130px;
+                    letter-spacing: 2px;
+                }
+            }
+        }
+    }
+}
