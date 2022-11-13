@@ -99,11 +99,10 @@ const uid = user.uid;
 });  
 //LOGOUT
 logoutBtn?.addEventListener("click", ()=>{
-    alert("Hello")
+    alert('User Logged out');
     signOut(auth).then(() => {
     // Sign-out successful.
     window.location = "login.html";
-    alert('User Logged out');
 }).catch((error) => {
 // An error happened.
 const errorCode = error.code;
