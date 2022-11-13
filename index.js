@@ -2,7 +2,7 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-app.js";
 import { getDatabase, set, ref, update } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-database.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-analytics.js";
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-auth.js";;
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-auth.js";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 // Your web app's Firebase configuration
@@ -69,7 +69,7 @@ const dt = new Date();
 update(ref(database, 'users/' + user.uid),{
     last_login: username,
 })
-window.location = "dashborad.html";
+window.location = "dashboard.html";
 alert('User Logged in!');
 // ...
 })
@@ -95,9 +95,10 @@ const uid = user.uid;
 });  
 
 //LOGOUT
-logout.addEventListener('click' ,(e)=>{
+logout.addEventListener('logout' ,(e)=>{
 signOut(auth).then(() => {
 // Sign-out successful.
+    window.location = "login.html";
     alert('User Logged out');
 }).catch((error) => {
 // An error happened.
