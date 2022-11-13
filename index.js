@@ -24,9 +24,13 @@ const database = getDatabase(app);
 const analytics = getAnalytics(app);
 const auth = getAuth();
 
+//Button Reference
+const signUp = document.getElementById("signUp");
+const login = document.getElementById("login");
+const logoutBtn = document.getElementById("logoutBtn");
 
 //SIGNUP
-signUp.addEventListener('click',(e) =>{
+signUp?.addEventListener('click',(e) =>{
 
 var email = document.getElementById('email').value;
 var password = document.getElementById('password').value;
@@ -56,7 +60,7 @@ alert(errorMessage);
 
 
 //LOGIN
-login.addEventListener('click', (e)=>{
+login?.addEventListener('click', (e)=>{
 var email = document.getElementById('email').value;
 var password = document.getElementById('password').value;
 
@@ -93,11 +97,11 @@ const uid = user.uid;
 // ...
 }
 });  
-
 //LOGOUT
-logout.addEventListener('logout' ,(e)=>{
-signOut(auth).then(() => {
-// Sign-out successful.
+logoutBtn?.addEventListener("click", ()=>{
+    alert("Hello")
+    signOut(auth).then(() => {
+    // Sign-out successful.
     window.location = "login.html";
     alert('User Logged out');
 }).catch((error) => {
