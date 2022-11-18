@@ -121,6 +121,13 @@ header .header_buttons {
 header ul {
   display: flex;
 }
+header ul #logoutBtn {
+  font-family: "Bungee";
+  width: 80px;
+  height: 38px;
+  margin-top: -10px;
+  cursor: pointer;
+}
 header li {
   list-style: none;
   padding-right: 25px;
@@ -400,7 +407,7 @@ main .right_main .model_icon {
   margin-bottom: 30px;
 }
 .dashboard_main .dashboard_content .dashboard_games {
-  width: 90%;
+  width: 30%;
   height: 320px;
   border: 2px solid #111;
   border-radius: 10px;
