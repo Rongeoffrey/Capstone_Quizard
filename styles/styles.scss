@@ -32,6 +32,13 @@ header{
         }
         ul{
             display: flex;
+            #logoutBtn{
+                font-family: $primaryFont;
+                width: 80px;
+                height: 38px;
+                margin-top: -10px;
+                cursor: pointer;
+            }
         }
         li{
             list-style: none;
@@ -250,7 +257,7 @@ main{
             margin-bottom: 30px;
         }
         .dashboard_games{
-            width: 90%;
+            width: 30%; //* width:90% *//
             height: 320px;
             border: 2px solid $tertiaryColor;
             border-radius: 10px;
