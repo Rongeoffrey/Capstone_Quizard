@@ -59,31 +59,36 @@ alert(errorMessage);
 });
 
 
-//LOGIN
+//LOGIN 
 login?.addEventListener('click', (e)=>{
 var email = document.getElementById('email').value;
 var password = document.getElementById('password').value;
 
+
+/*signInWithEmailAndPassword(auth, email, password)*/
     signInWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
-// Signed in 
-const user = userCredential.user;
+    // Signed in 
+    const user = userCredential.user;
 
-const dt = new Date();
-update(ref(database, 'users/' + user.uid),{
-    last_login: username,
-})
-window.location = "dashboard.html";
-alert('User Logged in!');
-// ...
-})
+    const dt = new Date();
+    update(ref(database, 'users/' + user.uid),{
+        last_login: email, /*username*/
+    })
+    window.location = "dashboard.html";
+    alert('User Logged in!');
+    // ...
+    })
+
     .catch((error) => {
-    const errorCode = error.code;
-    const errorMessage = error.message;
+        const errorCode = error.code;
+        const errorMessage = error.message;
 
-    alert(errorMessage);
+        alert(errorMessage);
+    });
 });
-});
+
+
 
 const user = auth.currentUser;
 onAuthStateChanged(auth, (user) => {
