@@ -16,7 +16,7 @@ body{
     height: 100vh;
 }
 
-/* ----------------------------------------*/
+/* LANDING PAGE */
 
 header{
     height: 65px;
@@ -116,9 +116,7 @@ main{
     }
 }
 
-/* ABOUT PAGE */
-
-/* REGISTER / LOGIN PAGE */ 
+/* REGISTER & LOGIN PAGE */ 
 .login_form{
     height: 500px;
     width: 300px;
@@ -193,7 +191,7 @@ main{
     }
 }    
 
-/* DASHBOARD */
+/* DASHBOARD PAGE */
 .dashboard_main{
     width: 80%;
     margin: auto;
@@ -225,7 +223,7 @@ main{
             margin: auto;
             display: flex;
             justify-content: center;
-            .game1, .game2, .game3{
+            .game1form, .game2, .game3{
                 width: 280px;
                 height: 300px;
                 background: $mainBackground;
@@ -242,4 +240,15 @@ main{
             }
         }
     }
+}
+
+/* GAMES FORM PAGE */
+.game1_contentform{
+    height: 500px;
+    width: 300px;
+    background-color: $primaryColor;
+    margin: auto;
+    margin-top: 45px;
+    border-radius: 10px;
+    padding: 20px;
 }

@@ -64,6 +64,7 @@ login?.addEventListener('click', (e)=>{
 var email = document.getElementById('email').value;
 var password = document.getElementById('password').value;
 
+
 /*signInWithEmailAndPassword(auth, email, password)*/
     signInWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
@@ -78,7 +79,8 @@ var password = document.getElementById('password').value;
     alert('User Logged in!');
     // ...
     })
-        .catch((error) => {
+
+    .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
 

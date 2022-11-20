@@ -106,7 +106,7 @@ body {
   height: 100vh;
 }
 
-/* ----------------------------------------*/
+/* LANDING PAGE */
 header {
   height: 65px;
   width: 100%;
@@ -245,8 +245,7 @@ main .right_main .model_icon {
   margin-top: -160px;
 }
 
-/* ABOUT PAGE */
-/* REGISTER / LOGIN PAGE */
+/* REGISTER & LOGIN PAGE */
 .login_form {
   height: 500px;
   width: 300px;
@@ -334,7 +333,7 @@ main .right_main .model_icon {
   font-size: 12px;
 }
 
-/* DASHBOARD */
+/* DASHBOARD PAGE */
 .dashboard_main {
   width: 80%;
   margin: auto;
@@ -369,7 +368,7 @@ main .right_main .model_icon {
   display: flex;
   justify-content: center;
 }
-.dashboard_main .dashboard_content .dashboard_games .game1, .dashboard_main .dashboard_content .dashboard_games .game2, .dashboard_main .dashboard_content .dashboard_games .game3 {
+.dashboard_main .dashboard_content .dashboard_games .game1form, .dashboard_main .dashboard_content .dashboard_games .game2, .dashboard_main .dashboard_content .dashboard_games .game3 {
   width: 280px;
   height: 300px;
   background: linear-gradient(180deg, rgb(89, 6, 194) 14%, rgb(43, 19, 138) 50%, rgb(25, 7, 47) 91%);
@@ -377,10 +376,21 @@ main .right_main .model_icon {
   border-radius: 10px;
   text-align: center;
 }
-.dashboard_main .dashboard_content .dashboard_games .game1 h3, .dashboard_main .dashboard_content .dashboard_games .game2 h3, .dashboard_main .dashboard_content .dashboard_games .game3 h3 {
+.dashboard_main .dashboard_content .dashboard_games .game1form h3, .dashboard_main .dashboard_content .dashboard_games .game2 h3, .dashboard_main .dashboard_content .dashboard_games .game3 h3 {
   color: white;
   font-family: "Bungee";
   font-size: 15px;
   padding-top: 130px;
   letter-spacing: 2px;
+}
+
+/* GAMES FORM PAGE */
+.game1_contentform {
+  height: 500px;
+  width: 300px;
+  background-color: white;
+  margin: auto;
+  margin-top: 45px;
+  border-radius: 10px;
+  padding: 20px;
 }/*# sourceMappingURL=styles.css.map */
