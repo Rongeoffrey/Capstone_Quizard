@@ -1,6 +1,8 @@
-import { getAuth, signInWithEmailAndPassword, signOut } from 'firebase/auth';
+import { connectAuthEmulator, signInWithEmailAndPassword } from 'firebase/auth';
 import { doc, getDocs, limit, query, updateDoc, where } from 'firebase/firestore';
 import {database, auth, userRef} from './config/firebaseConfig.js'
+
+// connectAuthEmulator(auth, "http://localhost:5055");
 
 //LOGIN
 const login = document.getElementById("login");
@@ -12,20 +14,20 @@ login?.addEventListener('click', (e)=>{
     
     if(userId !== '' && password !== '')
     {
-        GetUserEmail(userId).then(value => userId = value)
-        .then(signInWithEmailAndPassword(auth, userId, password))
-        .then(() => {
-            console.log(userId)
-            if(getAuth !== undefined){
-                RecordLogin(userId)
+        GetUserEmail(userId).then(value => userId = value) //GET EMAIL OF USERS
+        .then((email) => {
+            if(email !== '') {
+                signInWithEmailAndPassword(auth, userId, password) //IF EMAIL EXISTS TRY TO LOGIN
                 .then(() => {
-                    window.location = "dashboard.html";
-                    alert('User Logged in!');
+                    RecordLogin(userId)
+                    .then(() => {
+                        window.location = "dashboard.html";
+                        alert('User Logged in!');
+                    })
                 })
+                .catch(() => {alert("incorrect username or password")})
             }
-            else{
-                console.log("login failed")
-            }
+            else{ alert("Email doesnt exists")}
         })
     }
    
@@ -59,7 +61,7 @@ async function GetUserEmail(userId){ //GET EMAIL OF USER
     const querySnapshot = await getDocs(q);
     querySnapshot.forEach((doc) => { email = doc.data().email});
 
-    email === undefined && console.log("Email Doesnt exist")
+    email === '' ? console.log("Email Doesnt exist"): console.log("email exists")
 
     return email
 }
