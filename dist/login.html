@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <title>Sign in to Quizard</title>
+</head>
+
+<body>
+    <header>
+        <div class="header_brand"></div>
+
+        <div class="header_buttons">
+            <ul>
+                <li><a href="index.html"> Home </a></li>
+                <li><a href="#"> Join </a></li>
+                <li><a href="/dist/register.html"> register </a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="login_form">
+        <div class="login_container">
+            <h1>Login</h1>
+            <form>
+                <input required type="text" id="userId" name="userId" placeholder="username or email"/>
+                <input requred type="password" id="password" name="password" placeholder="Password"/>
+                <input type="submit" id='login' name="login" value="Login"/>
+            </form>
+              
+        </div>
+        <div class="login_container_text2">
+            <h2> Don't have an account? <a href="register.html"> Sign up </a></h2>
+        </div>
+    </div>
+</body>
+
+<script src="bundle.js"></script>
+</html>
