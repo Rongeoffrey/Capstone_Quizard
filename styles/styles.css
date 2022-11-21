@@ -121,12 +121,17 @@ header .header_buttons {
 header ul {
   display: flex;
 }
-header ul #logoutBtn {
+header ul #logout {
   font-family: "Bungee";
   width: 80px;
   height: 38px;
   margin-top: -10px;
   cursor: pointer;
+}
+header ul #logout:hover {
+  color: white;
+  background-color: #111;
+  transition: background-color 0.5s ease;
 }
 header li {
   list-style: none;
