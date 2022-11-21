@@ -18,7 +18,7 @@ login?.addEventListener('click', (e)=>{
         .then((email) => {
             if(email !== '') {
                 signInWithEmailAndPassword(auth, userId, password) //IF EMAIL EXISTS TRY TO LOGIN
-                .then(() => {
+                .then(() => { //REDIRECTS USER TO DASHSBOARD
                     RecordLogin(userId)
                     .then(() => {
                         window.location = "dashboard.html";

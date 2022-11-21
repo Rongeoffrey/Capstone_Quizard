@@ -3,11 +3,13 @@ const path = require('path')
 module.exports = {
   mode: 'development',
   devtool: 'eval-source-map',
-  entry: './src/index.js',
+  entry:{ 
+    'bundle' : path.resolve(__dirname, './src/index.js'),
+    'authStatusBundle' : path.resolve(__dirname, './src/authStatus.js'),
+  },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    publicPath: "/build/",
-    filename: 'bundle.js'
+    filename: '[name].js'
   },
   devServer:{
     static: './dist/',
